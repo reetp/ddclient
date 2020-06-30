@@ -24,6 +24,7 @@ AC_SUBST([PERL])
 # Perl modules required to run ddclient. Core modules may be omitted;
 # they are assumed to always exist.
 m4_foreach_w([_m], [
+    version
   ], [AX_PROG_PERL_MODULES([_m], [],
          [AC_MSG_ERROR([missing required Perl module _m])])])
 
